@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export default () => (
+export default ({ navigation }) => (
   <View>
-    <Text>Detail</Text>
+    <Text>Upbit</Text>
   </View>
 );
