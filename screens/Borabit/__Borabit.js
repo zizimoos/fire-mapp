@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 
 export default ({ navigation }) => {
   return (
-    <View style={{ backgroundColor: "white" }}>
+    <View style={{ flex: 1,backgroundColor: "white" }}>
       <Text>Borabit</Text>
       <View
         style={{

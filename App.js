@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { Image, StatusBar } from "react-native";
 import AppLoading from "expo-app-loading";
 import { Asset } from "expo-asset";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons} from "@expo/vector-icons";
+import { FontAwesome5 } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import * as Font from "expo-font";
 import { NavigationContainer } from "@react-navigation/native";
 import Stack from "./navigation/Stack";
@@ -27,8 +29,8 @@ export default function App() {
       "https://kavenyou.com/wp-content/uploads/2019/03/eyestyling-blackpink-choosing-colored-contact-lens.png",
       require("./assets/splash.png"),
     ]);
-    const fonts = cachFonts([Ionicons.font]);
-    return Promise.all([...images, ...fonts]);
+    const fonts = cachFonts([MaterialCommunityIcons.font, Ionicons.font,FontAwesome5.font]);
+    return  Promise.all([...images, ...fonts]);
   };
   const onFinish = () => setIsReady(true);
   return isReady ? (

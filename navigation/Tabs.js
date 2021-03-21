@@ -3,7 +3,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Borabit from "../screens/Borabit";
 import Bithum from "../screens/Bithum";
 import Upbit from "../screens/Upbit";
-import { FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 import { useLayoutEffect } from "react";
 
@@ -25,24 +26,24 @@ export default ({ navigation, route }) => {
           console.log(route.name);
           if (route.name === "Borabit") {
             return (
-              <FontAwesome5
-                name="bitcoin"
+              <MaterialCommunityIcons
+                name="qrcode-scan"
                 size={28}
-                color={focused ? "white" : "grey"}
+                color={focused ? "white" : "black"}
               />
             );
           } else if (route.name === "Bithum") {
             return (
-              <MaterialCommunityIcons
-                name="alpha-b-circle-outline"
+              <Ionicons
+                name="logo-react"
                 size={28}
                 color={focused ? "white" : "grey"}
               />
             );
           } else if (route.name === "Upbit") {
             return (
-              <MaterialCommunityIcons
-                name="alpha-u-circle-outline"
+              <Ionicons
+                name="md-logo-android"
                 size={28}
                 color={focused ? "white" : "grey"}
               />
